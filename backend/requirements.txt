@@ -3,4 +3,5 @@ Flask-SQLAlchemy
 Flask-Cors
 psycopg2-binary
 alembic
-python-dotenv 
+python-dotenv
+gunicorn 
