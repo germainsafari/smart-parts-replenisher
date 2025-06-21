@@ -1,0 +1,21 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.*
+
+# Database files
+dev.db
+*.sqlite3
+
+# Instance folder
+instance/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
