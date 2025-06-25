@@ -9,7 +9,8 @@ def create_po(part_id, qty, eta_str=None):
         return {'error': f'Part with id {part_id} not found'}, 404
 
     eta = date.fromisoformat(eta_str) if eta_str else date.today()
-    po = PurchaseOrder(part_id=part_id, qty_ordered=qty, eta=eta)
+    # Use the current part price as the default unit price
+    po = PurchaseOrder(part_id=part_id, qty_ordered=qty, unit_price=part.price, eta=eta)
     db.session.add(po)
     db.session.commit()
     
